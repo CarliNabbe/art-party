@@ -1,0 +1,242 @@
+<html>
+<head>
+    <title>Art Party</title>
+    <link rel="stylesheet" type="text/css" href="style.css">    
+</head>
+<body>
+
+    
+<section id="container">
+<img src="img/color.png" alt="" usemap="#Map" />
+<map name="Map" id="Map">
+    <area alt="" id="orange" href="javascript:random_orange()" shape="poly" coords="173,64,236,39,293,32,365,42,416,64,295,275" />
+    <area alt="" id="pink" href="javascript:random_pink()" shape="poly" coords="430,68,492,115,525,161,549,216,559,283,304,288" />
+    <area alt="" id="purple" href="javascript:random_purple()" shape="poly" coords="557,296,548,368,521,428,482,477,433,515,305,296" />
+    <area alt="" id="blue" href="javascript:random_blue()" shape="poly" coords="421,517,361,541,297,552,226,544,168,519,297,300" />
+    <area alt="" id="green" href="javascript:random_green()" shape="poly" coords="160,514,104,471,56,410,37,353,29,297,285,297" />
+    <area alt="" id="yellow" href="javascript:random_yellow()" shape="poly" coords="33,283,41,216,66,156,105,107,157,66,282,285" />
+</map>    
+</section>
+    
+<script>
+    
+//Verschillende vragen per categorie.
+//De vragen verschillen per categorie en per kleur
+    
+let orange_one = "Laat je medespelers jou omrollen in wc papier zodat je op een mummie lijkt."
+let orange_two = "Maak het raam open en roep heel hard 'Ik ben vegan'."
+let orange_three = "Druk armpje met de tegenspeler die tegenover je zit."
+let orange_four = "Laat iemand een mooie tatoeage tekenen op je hand met fineliner."
+let orange_five = "impressioneer een celebrity, tegenspelers moeten het raden."
+
+let pink_one = "Teken de persoon tegenover jou als een cowboy in 30 seconden."
+let pink_two = "Teken Donald Trump binnen 30 seconden. Laat je tegenspelers beoordelen of het op hem lijkt."
+let pink_three = "Teken de persoon links van je als een romeinse god/godin in 30 seconden."
+let pink_four = "Teken je linker tegenspeler als een superheld binnen 30 seconden."
+let pink_five = "Teken het hoofd van de karakter/dier en geeft het door aan de andere spelers totdat er een karakter ontstaan binnen 1 minuut."
+
+let purple_one = "Ben ik ooit lam dronken geweest?"
+let purple_two = "Heb ik ooit een blowtje gerookt?"
+let purple_three = "Heb ik ooit iets gestolen?"
+let purple_four = "Heb ik ooit iemand gepest?"
+let purple_five = "Ben ik ooit vreemd gegaan?"
+
+let blue_one = "Laat je medespelers jou omrollen in wc papier zodat je op een mummie lijkt."
+let blue_two = "Maak het raam open en roep heel hard 'Ik ben vegan'."
+let blue_three = "Druk armpje met de tegenspeler die tegenover je zit."
+let blue_four = "Laat iemand een mooie tatoeage tekenen op je hand met fineliner."
+let blue_five = "impressioneer een celebrity, tegenspelers moeten het raden."
+
+let green_one = "Fake een orgasme."
+let green_two = "Laat een tegenspeler een foto maken van jou met je vinger in je neus."
+let green_three = "Ga heel debiel lachen voor 10 seconden."
+let green_four = "Bouw met je tegenspelers een zo hoog mogelijke toren met random spullen."
+let green_five = "Doe de worm op de grond."
+
+let yellow_one = "Ga armpje drukken met de eerste/laatste speler."
+let yellow_two = "Speel steen papieren schaar met de eerste/laatste speler."
+let yellow_three = "Speel een rondje 'Boter, kaas en eieren' met de eerste/laatste speler."
+let yellow_four = "Maak samen met de eerste/laatste persoon een eigen papieren vliegtuigje. Degene wiens vliegtuigje het verst landt, heeft gewonnen."
+let yellow_five = "Citeer het alfabet met de timer. Laat de eerste/laatste speler hetzelfde doen. Schrijf je tijd op. Degene met de kortste tijd wint."
+
+//Aanmaken arrays per kleur
+
+let orange_array = [orange_one, orange_two, orange_three, orange_four, orange_five];
+let pink_array = [pink_one, pink_two, pink_three, pink_four, pink_five];
+let purple_array = [purple_one, purple_two, purple_three, purple_four, purple_five];
+let blue_array = [blue_one, blue_two, blue_three, blue_four, blue_five];
+let green_array = [green_one, green_two, green_three, green_four, green_five];
+let yellow_array = [yellow_one, yellow_two, yellow_three, yellow_four, yellow_five];
+
+</script>
+    
+<!--Verschillende IDs voor omzetten arrays naar strings-->
+<p id="orange_p"></p>
+<p id="pink_p"></p>
+<p id="purple_p"></p>
+<p id="blue_p"></p>
+<p id="green_p"></p>
+<p id="yellow_p"></p>
+    
+<script>
+        
+        function random_orange() {
+            let rand = orange_array[Math.floor(Math.random() * orange_array.length)];
+            console.log(rand)
+            orange_array.toString();
+            document.getElementById("orange_p").innerHTML = rand;
+            
+            orangeAndHide();
+        }
+    
+</script>
+    
+<script>
+        
+        function random_pink() {
+            let rand = pink_array[Math.floor(Math.random() * pink_array.length)];
+            console.log(rand)
+            pink_array.toString();
+            document.getElementById("pink_p").innerHTML = rand;
+            
+            pinkAndHide();
+        }
+    
+</script>
+    
+<script>
+        
+        function random_purple() {
+            let rand = purple_array[Math.floor(Math.random() * purple_array.length)];
+            console.log(rand)
+            purple_array.toString();
+            document.getElementById("purple_p").innerHTML = rand;
+            
+            purpleAndHide();
+        }
+    
+</script>
+    
+<script>
+        
+        function random_blue() {
+            let rand = blue_array[Math.floor(Math.random() * blue_array.length)];
+            console.log(rand)
+            blue_array.toString();
+            document.getElementById("blue_p").innerHTML = rand;
+            
+            blueAndHide();
+        }
+    
+</script>
+    
+<script>
+        
+        function random_green() {
+            let rand = green_array[Math.floor(Math.random() * green_array.length)];
+            console.log(rand)
+            green_array.toString();
+            document.getElementById("green_p").innerHTML = rand;
+            
+            greenAndHide();
+        }
+    
+</script>
+    
+<script>
+        
+        function random_yellow() {
+            let rand = yellow_array[Math.floor(Math.random() * yellow_array.length)];
+            console.log(rand)
+            yellow_array.toString();
+            document.getElementById("yellow_p").innerHTML = rand;
+            
+            yellowAndHide();
+        }
+    
+</script>
+    
+    
+<script>
+    
+    function orangeAndHide() {
+        document.getElementById("orange_p").style.display = "block";
+        document.getElementById("pink_p").style.display = "none";
+        document.getElementById("purple_p").style.display = "none";
+        document.getElementById("blue_p").style.display = "none";
+        document.getElementById("green_p").style.display = "none";
+        document.getElementById("yellow_p").style.display = "none";
+    }
+    
+    function pinkAndHide() {
+        document.getElementById("orange_p").style.display = "none";
+        document.getElementById("pink_p").style.display = "block";
+        document.getElementById("purple_p").style.display = "none";
+        document.getElementById("blue_p").style.display = "none";
+        document.getElementById("green_p").style.display = "none";
+        document.getElementById("yellow_p").style.display = "none";
+    }
+    
+    function purpleAndHide() {
+        document.getElementById("orange_p").style.display = "none";
+        document.getElementById("pink_p").style.display = "none";
+        document.getElementById("purple_p").style.display = "block";
+        document.getElementById("blue_p").style.display = "none";
+        document.getElementById("green_p").style.display = "none";
+        document.getElementById("yellow_p").style.display = "none";
+    }
+    
+    function blueAndHide() {
+        document.getElementById("orange_p").style.display = "none";
+        document.getElementById("pink_p").style.display = "none";
+        document.getElementById("purple_p").style.display = "none";
+        document.getElementById("blue_p").style.display = "block";
+        document.getElementById("green_p").style.display = "none";
+        document.getElementById("yellow_p").style.display = "none";
+    }
+    
+    function greenAndHide() {
+        document.getElementById("orange_p").style.display = "none";
+        document.getElementById("pink_p").style.display = "none";
+        document.getElementById("purple_p").style.display = "none";
+        document.getElementById("blue_p").style.display = "none";
+        document.getElementById("green_p").style.display = "block";
+        document.getElementById("yellow_p").style.display = "none";
+    }
+    
+    function yellowAndHide() {
+        document.getElementById("orange_p").style.display = "none";
+        document.getElementById("pink_p").style.display = "none";
+        document.getElementById("purple_p").style.display = "none";
+        document.getElementById("blue_p").style.display = "none";
+        document.getElementById("green_p").style.display = "none";
+        document.getElementById("yellow_p").style.display = "block";
+    }
+    
+</script>
+    
+    
+<!--
+<script>
+   
+
+document.getElementById("orange").onclick = function(random) {random()};
+    
+    let vraag_1 = "BLEPBLEPBELPBELP"
+    let vraag_2 = "HelloHelloHello"
+    
+function random() {
+    console.log("Hello check!")
+    var x = document.getElementById("show");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+
+</script>
+-->    
+ 
+</body>
+</html>
